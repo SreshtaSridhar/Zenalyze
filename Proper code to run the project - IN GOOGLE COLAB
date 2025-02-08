@@ -1,0 +1,12 @@
+//Only the runtime code of the project 
+
+!pip install googletrans==4.0.0-rc1              //cell 1
+
+//code       //cell 2
+
+!pip install streamlit
+!wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O cloudflared
+!chmod +x cloudflared                                                                                                                 //cell 3
+
+
+!streamlit run app.py & ./cloudflared tunnel --url http://localhost:8501                 //cell 4
